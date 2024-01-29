@@ -1,0 +1,308 @@
+<ion-content [fullscreen]="true">
+  <section id="el-page-content">
+    <div class="el-content-left">
+      <div class="el-card">
+        <div class="el-container">
+          <div class="el-boxImg">
+            <img src="https://source.unsplash.com/random/300×300/?student" alt="" class="el-img" />
+          </div>
+          <h3>Nom de 'étudiant</h3>
+        </div>
+        <div class="el-content">
+          <div class="el-row">
+            <span>Adm No.:</span>
+            <p>789A</p>
+          </div>
+          <div class="el-row">
+            <span>Class:</span>
+            <p>6B</p>
+          </div>
+          <div class="el-row">
+            <span>Roll No.:</span>
+            <p>32</p>
+          </div>
+          <div class="el-row">
+            <span>Adress:</span>
+            <p>Casablanca Maroc</p>
+          </div>
+          <div class="el-row">
+            <span>Guardian:</span>
+            <p>Shiva Thapa</p>
+          </div>
+          <div class="el-row">
+            <span>Phone No.:</span>
+            <p>+243812318555</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="el-content-right">
+      <mat-tab-group>
+
+        <mat-tab label="Personnal Info">
+          <div class="el-card">
+            <div class="el-container-bolcks">
+              <div class="el-block">
+                <h3>Student info</h3>
+                <div class="el-row">
+                  <span>Email address</span>
+                  <p>elongajosue22&commat;gmail.com</p>
+                </div>
+                <div class="el-row">
+                  <span>Blood group</span>
+                  <p>AB</p>
+                </div>
+                <div class="el-row">
+                  <span>Gender</span>
+                  <p>Homme</p>
+                </div>
+                <div class="el-row">
+                  <span>Phone number</span>
+                  <p>+243812318555</p>
+                </div>
+                <div class="el-row">
+                  <span>Age</span>
+                  <p>27 ans</p>
+                </div>
+                <div class="el-row">
+                  <span>Date of Birth</span>
+                  <p>22 mars 1996</p>
+                </div>
+                <div class="el-row">
+                  <span>Admision date</span>
+                  <p>24 Jan 2016</p>
+                </div>
+                <div class="el-row">
+                  <span>Medical History</span>
+                  <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laboriosam nesciunt, corporis in vel expedita aliquam enim. Dignissimos similique ea nemo error maiores aspernatur rem consequatur ducimus a. Eius, repellat in.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="el-container-bolcks">
+              <div class="el-block">
+                <h3>Parent / guardian details</h3>
+                <div class="el-container">
+                  <div class="el-boxImg">
+                    <img src="https://source.unsplash.com/random/300×300/?dady" alt="" class="el-img">
+                  </div>
+                  <div class="el-container-rows">
+                    <div class="el-row">
+                      <span>Father's Name</span>
+                      <p>Nom du père</p>
+                    </div>
+                    <div class="el-row">
+                      <span>address</span>
+                      <p>l'adresse de la maison</p>
+                    </div>
+                    <div class="el-row">
+                      <span>Phone number</span>
+                      <p>+243812318555</p>
+                    </div>
+                    <div class="el-row">
+                      <span>Email address</span>
+                      <p>elongajosue22&commat;gmail.com</p>
+                    </div>
+                    <div class="el-row">
+                      <span>Profesion</span>
+                      <p>22 mars 1996</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="el-container">
+                  <div class="el-boxImg">
+                    <img src="https://source.unsplash.com/random/300×300/?mum" alt="" class="el-img">
+                  </div>
+                  <div class="el-container-rows">
+                    <div class="el-row">
+                      <span>Mather's Name</span>
+                      <p>Nom du mère</p>
+                    </div>
+                    <div class="el-row">
+                      <span>address</span>
+                      <p>l'adresse de la maison</p>
+                    </div>
+                    <div class="el-row">
+                      <span>Phone number</span>
+                      <p>+243812318555</p>
+                    </div>
+                    <div class="el-row">
+                      <span>Email address</span>
+                      <p>elongajosue22&commat;gmail.com</p>
+                    </div>
+                    <div class="el-row">
+                      <span>Profesion</span>
+                      <p>22 mars 1996</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </mat-tab>
+
+        <mat-tab label="Partisans">
+          <div class="el-card">
+            <h3>Horraire de partissipation au cours</h3>
+            <table mat-table [dataSource]="dataSource">
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="position">
+                  <th mat-header-cell *matHeaderCellDef> No. </th>
+                  <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                </ng-container>
+            
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef> Name </th>
+                  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+            
+                <!-- Weight Column -->
+                <ng-container matColumnDef="weight">
+                  <th mat-header-cell *matHeaderCellDef> Weight </th>
+                  <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                </ng-container>
+            
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="symbol">
+                  <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                  <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                </ng-container>
+            
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+            
+              <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                            showFirstLastButtons
+                            aria-label="Select page of periodic elements">
+              </mat-paginator>
+          </div>
+        </mat-tab>
+
+        <mat-tab label="Scores">
+          <div class="el-card">
+            <h3>Notes obtenu dans chaque cours</h3>
+            <table mat-table [dataSource]="dataSource">
+
+                <!-- Position Column -->
+                <ng-container matColumnDef="position">
+                  <th mat-header-cell *matHeaderCellDef> No. </th>
+                  <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                </ng-container>
+            
+                <!-- Name Column -->
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef> Name </th>
+                  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+            
+                <!-- Weight Column -->
+                <ng-container matColumnDef="weight">
+                  <th mat-header-cell *matHeaderCellDef> Weight </th>
+                  <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                </ng-container>
+            
+                <!-- Symbol Column -->
+                <ng-container matColumnDef="symbol">
+                  <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                  <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                </ng-container>
+            
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+            
+              <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                            showFirstLastButtons
+                            aria-label="Select page of periodic elements">
+              </mat-paginator>
+          </div>
+        </mat-tab>
+
+        <!-- <mat-tab label="Exam">
+          <div class="el-card">
+            <h3>Update Invoice 4</h3>
+            <table mat-table [dataSource]="dataSource">
+
+                <!-- Position Column ->
+                <ng-container matColumnDef="position">
+                  <th mat-header-cell *matHeaderCellDef> No. </th>
+                  <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                </ng-container>
+            
+                <!-- Name Column ->
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef> Name </th>
+                  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+            
+                <!-- Weight Column ->
+                <ng-container matColumnDef="weight">
+                  <th mat-header-cell *matHeaderCellDef> Weight </th>
+                  <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                </ng-container>
+            
+                <!-- Symbol Column ->
+                <ng-container matColumnDef="symbol">
+                  <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                  <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                </ng-container>
+            
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+            
+              <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                            showFirstLastButtons
+                            aria-label="Select page of periodic elements">
+              </mat-paginator>
+          </div>
+        </mat-tab>
+
+        <mat-tab label="Documents">
+          <div class="el-card">
+            <h3>Update Invoice 5</h3>
+            <table mat-table [dataSource]="dataSource">
+
+                <!-- Position Column ->
+                <ng-container matColumnDef="position">
+                  <th mat-header-cell *matHeaderCellDef> No. </th>
+                  <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+                </ng-container>
+            
+                <!-- Name Column ->
+                <ng-container matColumnDef="name">
+                  <th mat-header-cell *matHeaderCellDef> Name </th>
+                  <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+            
+                <!-- Weight Column ->
+                <ng-container matColumnDef="weight">
+                  <th mat-header-cell *matHeaderCellDef> Weight </th>
+                  <td mat-cell *matCellDef="let element"> {{element.weight}} </td>
+                </ng-container>
+            
+                <!-- Symbol Column ->
+                <ng-container matColumnDef="symbol">
+                  <th mat-header-cell *matHeaderCellDef> Symbol </th>
+                  <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+                </ng-container>
+            
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+              </table>
+            
+              <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                            showFirstLastButtons
+                            aria-label="Select page of periodic elements">
+              </mat-paginator>
+          </div>
+        </mat-tab> -->
+
+      </mat-tab-group>
+    </div>
+  </section>
+</ion-content>

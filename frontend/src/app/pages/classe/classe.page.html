@@ -1,0 +1,116 @@
+<ion-content [fullscreen]="true">
+<section id="el-page-content">
+  <article class="el-container-cards">
+    <div class="el-card">
+      <h3>List of Students</h3>
+      <table mat-table [dataSource]="dataSourceStudent">
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let element"> </td>
+        </ng-container>
+    
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Name </th>
+          <td mat-cell *matCellDef="let element"> </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="adm_no">
+          <th mat-header-cell *matHeaderCellDef> Adm No. </th>
+          <td mat-cell *matCellDef="let element"> </td>
+        </ng-container>
+    
+        <!-- Weight Column -->
+        <ng-container matColumnDef="roll_no">
+          <th mat-header-cell *matHeaderCellDef> Roll No. </th>
+          <td mat-cell *matCellDef="let element"> </td>
+        </ng-container>
+    
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="guardian">
+          <th mat-header-cell *matHeaderCellDef> Guardian </th>
+          <td mat-cell *matCellDef="let element"> </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="guardian_phone">
+          <th mat-header-cell *matHeaderCellDef> Guardian Phone </th>
+          <td mat-cell *matCellDef="let element">  </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef> Actions </th>
+          <td mat-cell *matCellDef="let element">  </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumnsStudent"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumnsStudent;"></tr>
+      </table>
+    
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                    showFirstLastButtons
+                    aria-label="Select page of periodic elements">
+      </mat-paginator>
+    </div>
+    <div class="el-card">
+      <h3>Timetable Schedule for class 1(A)</h3>
+      <table mat-table [dataSource]="dataSourceCourse">
+
+        <!-- Position Column -->
+        <ng-container matColumnDef="lundi">
+          <th mat-header-cell *matHeaderCellDef> Lundi </th>
+          <td mat-cell *matCellDef="let element"> </td>
+        </ng-container>
+    
+        <!-- Name Column -->
+        <ng-container matColumnDef="mardi">
+          <th mat-header-cell *matHeaderCellDef> Mardi </th>
+          <td mat-cell *matCellDef="let element"> </td>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="mercredi">
+          <th mat-header-cell *matHeaderCellDef> Mercredi </th>
+          <td mat-cell *matCellDef="let element"> </td>
+        </ng-container>
+    
+        <!-- Weight Column -->
+        <ng-container matColumnDef="jeudi">
+          <th mat-header-cell *matHeaderCellDef> Jeudi </th>
+          <td mat-cell *matCellDef="let element"> </td>
+        </ng-container>
+    
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="vendredi">
+          <th mat-header-cell *matHeaderCellDef> Vendredi </th>
+          <td mat-cell *matCellDef="let element"> </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="samedi">
+          <th mat-header-cell *matHeaderCellDef> Samedi </th>
+          <td mat-cell *matCellDef="let element">  </td>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="action">
+          <th mat-header-cell *matHeaderCellDef> Actions </th>
+          <td mat-cell *matCellDef="let element">  </td>
+        </ng-container>
+    
+        <tr mat-header-row *matHeaderRowDef="displayedColumnsCourse"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumnsCourse;"></tr>
+      </table>
+    
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]"
+                    showFirstLastButtons
+                    aria-label="Select page of periodic elements">
+      </mat-paginator>
+    </div>
+  </article>
+</section>
+</ion-content>
